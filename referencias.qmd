@@ -1,0 +1,7 @@
+# Referências {.unnumbered}
+
+::: {#refs}
+
+
+bibliography: referencias.bib
+:::

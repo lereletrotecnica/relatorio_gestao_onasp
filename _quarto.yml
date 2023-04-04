@@ -1,7 +1,7 @@
 project:
   type: book
-  output-dir: _book
-  
+  output-dir: docs
+
 
 book:
   title: "Relatório de Gestão da Ouvidoria Nacional dos Serviços Penais"
@@ -11,20 +11,20 @@ book:
   page-navigation: true
   page-footer:
    background: "#294661"
-   center: 
+   center:
     - text: "Secretaria Nacional de Políticas Penais - Senappen"
       href: https://www.gov.br/depen/pt-br
     - text: "Ministério da Justiça e Segurança Pública - MJSP"
       href: https://www.gov.br/mj/pt-br
-  cover-image: images/senappen_brasao.png 
+  cover-image: images/senappen_brasao.png
   #logo: images/brasao_ouvidoria.jpeg
   image: images/senappen_brasao.png
   site-url: https://www.gov.br/depen/pt-br
   sharing: [twitter, facebook, linkedin]
-  search: 
+  search:
     location: sidebar
     type: textbox
-  
+
   sidebar:
     font.family: 'Calibri'
     title: "Ouvidoria Nacional dos Serviços Penais"
@@ -34,10 +34,10 @@ book:
     logo: images/senappen_brasao.png
     style: docked
     alignment: left
-    tools: 
+    tools:
       - icon: git
       - href: https://www.gov.br/depen/pt-br/canais_atendimento/ouvidoria
- 
+
   chapters:
     - index.qmd
     - introducao.qmd
@@ -51,13 +51,13 @@ book:
       - estatisticas_2022.qmd
     - consideracoes.qmd
 
-    
+
 
 bibliography: referencias.bib
 
 format:
   html:
-    embed-resources: false #COLOCA TODOS OS ARQUIVOS JUNTOS 
+    embed-resources: false #COLOCA TODOS OS ARQUIVOS JUNTOS
     theme: cosmo
     code-link: true
     css: style.css
@@ -65,8 +65,8 @@ format:
   pdf:
     documentclass: scrreprt
 
-knitr: 
-  opts_chunk: 
+knitr:
+  opts_chunk:
     fig.align: "center"
     message: false
     echo: false
@@ -75,8 +75,8 @@ knitr:
     warning: false
     out-width: NULL
     fig.responsive: TRUE
-    
-    
+
+
 lang: pt
 csl: abnt.csl
 

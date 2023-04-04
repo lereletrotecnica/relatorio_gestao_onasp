@@ -1,5 +1,10 @@
 # Ações {#sec-acoes}
 
+```{r}
+vetor_filtro1 <- c(2020,2021,2022)
+```
+
+
 Este capítulo trata das ações da Ouvidoria nacional dos Serviços Penais (Onasp) que objetivam: Atuar como instância de controle e participação social na execução penal; fomentar e apoiar formas de participação social; fomentar e apoiar a implantação e o funcionamento de ouvidorias externas.
 
 Dessa maneira, a Onasp se organizou e promoveu o I Fórum Nacional de Participação e Controle na Execução Penal, realizou inspeções prisionais, internalizou o Serviço de Informação ao Cidadão (SIC), atualizou sua estrutura organizacional, iniciou o processo de modernização do aparato tecnológico e participou de ações de práticas restaurativas.
@@ -190,8 +195,7 @@ Desde que foi instituído, o Serviço de Informação ao Cidadão Setorial da Se
 
 ### Indicadores do Serviço de Informação ao Cidadão {#sec-sic-dados-2021}
 
-Os indicadores de atendimento dos processos relativos ao SIC Setorial da Senappen estão relacionados na tabela abaixo. As informações são extraídas do Sistema Eletrônico de Informações (SEI). Com relação ao ano de 2021, os dados foram coletados a partir de outubro, pois 
-a ouvidoria encarregou-se dos procedimentos de tratamento desse tipo de demanda a partir do referido mês, conforme  Decreto nº 10.785, de 1º de setembro de 2021. 
+Os indicadores de atendimento dos processos relativos ao SIC Setorial da Senappen estão relacionados na tabela abaixo. As informações são extraídas do Sistema Eletrônico de Informações (SEI). Com relação ao ano de 2021, os dados foram coletados a partir de outubro, pois a ouvidoria encarregou-se dos procedimentos de tratamento desse tipo de demanda a partir do referido mês, conforme Decreto nº 10.785, de 1º de setembro de 2021.
 
 ```{r}
 
@@ -214,7 +218,6 @@ formattable::formattable(
 
 ```
 
-
  
 
 ## Composição da Equipe de Ouvidoria {#sec-composicao-equipe}
@@ -226,13 +229,21 @@ composicao <-
   ) |> 
   pivot_wider(names_from = Cargo, values_from = Quantidade) |> 
   mutate(
-    Total = `Servidores estatutários` + `Estagiários` + `Funcionários terceirizados`
+    Total = `Servidores estatutários` + `Estagiários` + `Funcionários terceirizados`,
+    var_perc = 0
   )
+
+for (i in 2:nrow(composicao)) {
+    composicao$var_perc[i]=(composicao$Total[i]/composicao$Total[i-1]-1)*100
+}
+
+composicao <- composicao |> mutate(var_perc = round(var_perc,digits = 2))
+
+names(composicao) <- c("Ano","Servidores Estatutários","Estagiários","Funcionários Terceirizados","Total","Var. Percentual(%)")
 ```
 
-Entre 2020 e 2022, houve um aumento de 35% na quantidade de colaboradores lotados na Ouvidoria Nacional dos Serviços Penais. Além disso, houve pouca rotatividade entre os membros da equipe.
-
-A tabela abaixo mostra essa variação, detalhadamente.
+A tabela abaixo mostra a evolução da quantidade de colaboradores da Onasp no período de referência. A última coluna da tabela mostra 
+a variação percentual dessa variável.  
 
 ```{r}
 
@@ -253,9 +264,13 @@ Considerando a gama de competências atribuídas à Ouvidoria e como forma de ga
 
 -   Desenvolvimento de ações para realização das Inspeções em Estabelecimentos Penais;
 
--   Tratamento e acompanhamento das manifestações recebidas pela Ouvidoria e acompanhamentos eventuais nas inspeções;
+-   Tratamento e acompanhamento das manifestações recebidas pela ouvidoria e acompanhamentos eventuais nas inspeções;
 
--   Gerenciamento e tratamento dos dados coletados pela ouvidoria, além de elaboração de relatórios;
+-   Gerenciamento de informações;
+
+-   Tratamento e coletados de dados;
+
+-   Elaboração e automatização de relatórios;
 
 -   Composição do plantão de segurança da sede; e
 

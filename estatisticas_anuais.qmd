@@ -1383,12 +1383,11 @@ O processo de análise e encaminhamento de demandas na ouvidoria nacional dos se
 
 Na primeira etapa, em sua maioria, o tempo medido para entrega da carta, e-mail, ofício ou Fala.BR é utilizado para determinação do tempo de chegada à ouvidoria. Após a entrega da manifestação, inicia-se a contagem do tempo de análise pela ouvidoria com a elaboração dos documentos processuais e encaminhamento.
 
-Dessa forma, surgem três índices para medição do tempo: **Tempo de chegada**, **Tempo de tratamento** e **Tempo total de atendimento**. 
+Dessa forma, surgem três índices para medição do tempo: **Tempo de chegada**, **Tempo de tratamento** e **Tempo total de atendimento**.
 
-- **Tempo de chegada:** tempo gasto entre a efetivação da demanda pelo manifestante e a chegada à Onasp. Para o caso de 
-demandas realizadas através de cartas físicas, a data do carimbo do selo dos correios é utilizada como referência;
+-   **Tempo de chegada:** tempo gasto entre a efetivação da demanda pelo manifestante e a chegada à Onasp. Para o caso de demandas realizadas através de cartas físicas, a data do carimbo do selo dos correios é utilizada como referência;
 
-- **Tempo de tratamento:** tempo entre a chegada da demanda e a conclusão do processo na Onasp;
+-   **Tempo de tratamento:** tempo entre a chegada da demanda e a conclusão do processo na Onasp;
 
 -   **Tempo total de atendimento:** O tempo necessário entre a efetivação da demanda pelo manifestante e a conclusão do processo na Ouvidoria Nacional dos Serviços Penais.
 
@@ -1398,8 +1397,7 @@ demandas realizadas através de cartas físicas, a data do carimbo do selo dos c
     O índices de atendimento são calculados a partir de amostras das datas de efetivação, recebimento e conclusão da demanda. Nesse sentido, o tempo total de atendimento não é a soma exata do tempo de tratamento e de chegada.
     :::
 
-O ano de 2020 trouxe índices de atendimento superiores devido ao represamento de cartas no período entre 2017 e 2019, com 
-início de tratamento em 2020.
+O ano de 2020 trouxe índices de atendimento superiores devido ao represamento de cartas no período entre 2017 e 2019, com início de tratamento em 2020.
 
 A próxima tabela mostra as médias e as medianas para cada índice no período de referência.
 
@@ -1745,5 +1743,3 @@ formattable::formattable(
     )
   )
 ```
-
-
